@@ -11,3 +11,15 @@ Di cosa ho bisogno per generare i numeri?
 Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
 */
+
+
+let gameGrid = document.getElementById('gameGrid'); // seleziono la  grid
+
+let cell = document.createElement('div'); // creo un div
+cell.className = 'cella'; // assegno a questo di la classe
+
+gameGrid.append(cell); // appendo al grid il div appena creato
+
+for (let i = 0; i < 100; i++){
+    cell
+}
