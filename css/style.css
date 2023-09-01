@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+.container{
+    width: 1000px;
+    margin: 100px auto;   
+}
+
+.griglia{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cella{
+    width: calc(100% / 10);
+    aspect-ratio: 1 / 1;
+    border: solid 1px white;
+}
