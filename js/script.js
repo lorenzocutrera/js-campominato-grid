@@ -13,13 +13,29 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento.
 */
 
 
-let gameGrid = document.getElementById('gameGrid'); // seleziono la  grid
 
-let cell = document.createElement('div'); // creo un div
-cell.className = 'cella'; // assegno a questo di la classe
+document.querySelector('.inizia').addEventListener('click', function () {
+    let gameGrid = document.getElementById('gameGrid'); // seleziono la  grid
+    gameGrid.innerHTML = ""; // svuoto il container
 
-gameGrid.append(cell); // appendo al grid il div appena creato
+    // scrivere per 100 volte un div.cella dentro al gameGrid
+    for (let i = 0; i < 100; i++) {
 
-for (let i = 0; i < 100; i++){
-    cell
-}
+
+        let cell = document.createElement('div'); // creo un div
+        cell.className = 'cella'; // assegno a questo di la classe
+        cell.innerText = i + 1;
+        
+        gameGrid.append(cell); // appendo al grid il div appena creato
+
+        cell.addEventListener('click', function () {
+            //console.log('ho cliccato sull elemento dom:', cellElement);
+            //console.log(this); // Dom element cellElement
+            this.classList.toggle('bg-green')
+            console.log(this.innerText);
+        })
+
+    }
+});
+
+
